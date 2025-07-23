@@ -9,11 +9,9 @@ import models.Maquina;
 public class App {
     public static void main(String[] args) throws Exception {
         List<Maquina> maquinas = crearMaquinas();
-
     }
 
     static List<Maquina> crearMaquinas() {
-
         List<Maquina> maquinas = Arrays.asList(
                 new Maquina("Controlador20", "155.25.220.238", Arrays.asList(21, 30, 29, 16)),
                 new Maquina("DB3", "172.144.210.32", Arrays.asList(4, 29, 16, 6, 2)),
@@ -66,6 +64,5 @@ public class App {
                 new Maquina("Nodo6", "169.238.150.174", Arrays.asList(6, 14, 3)),
                 new Maquina("DB13", "71.248.50.86", Arrays.asList(17, 11, 12)));
         return maquinas;
-
     }
 }

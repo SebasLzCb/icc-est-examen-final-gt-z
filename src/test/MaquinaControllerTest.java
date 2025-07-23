@@ -81,7 +81,6 @@ public class MaquinaControllerTest {
     @Test
     public void testMakeRiesgo() {
         Maquina m = new Maquina("Nodo99", "10.0.180.15", Arrays.asList(10, 15, 20));
-
         System.out.println("Ejecutando testMakeRiesgo");
         ValidacionesMaquina.validarCampoRiesgo(m, m.getRiesgo()); // 7 letras únicas en "Nodo99"
     }
@@ -109,13 +108,14 @@ public class MaquinaControllerTest {
         Map<Integer, Queue<Maquina>> resultado = controller.agruparPorRiesgo(maquinas);
         ValidacionesMaquina.validarResultadoC(resultado, maquinas);
     }
-
+ 
     @Test
     public void testExplotarGrupo() {
-        List<Maquina> maquinas = crearMaquinas();
+      List<Maquina> maquinas = crearMaquinas();
         Map<Integer, Queue<Maquina>> mapa = controller.agruparPorRiesgo(maquinas);
         Stack<Maquina> resultado = controller.explotarGrupo(mapa);
 
-        ValidacionesMaquina.validarResultadoD(resultado, maquinas);
+      ValidacionesMaquina.validarResultadoD(resultado, maquinas);
     }
+ 
 }
